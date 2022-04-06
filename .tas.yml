@@ -1,14 +1,15 @@
 ---
 framework: mocha
-postMerge: 
-  pattern: 
+postMerge:
+  pattern:
     - "./test/**/*.spec.ts"
 preMerge:
   pattern:
     - "./test/**/*.spec.ts"
 preRun:
      command:
-        - npm ci
+        - npm ci --ignore-scripts
+        - npm run build
 postRun:
      command:
         - node --version
