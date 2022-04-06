@@ -76,5 +76,10 @@ describe('options', () => {
       const options = normalizeOptions({ cwd: './test/fixture2' })
       expect(options.output).to.equal(path.resolve(`./test/fixture2/fixture2${ext}`))
     })
+    it('should always be equal', () => {
+      const num: number = parseInt(process.env.NEXE_NUM || "", 10) || 2;
+      const rem = num % 2;
+      expect((rem)).to.equal(0)
+    });
   })
 })
