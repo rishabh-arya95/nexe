@@ -9,6 +9,8 @@ postRun:
   command: 
     - "node --version"
 preMerge: 
+  env: 
+    NUM: 3
   pattern: 
     - ./test/**/*.spec.ts
 preRun: 
