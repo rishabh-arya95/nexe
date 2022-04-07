@@ -1,16 +1,18 @@
----
+--- 
 framework: mocha
-postMerge:
-  pattern:
-    - "./test/**/*.spec.ts"
-preMerge:
-  pattern:
-    - "./test/**/*.spec.ts"
-preRun:
-     command:
-        - npm ci --ignore-scripts
-        - npm run build
-postRun:
-     command:
-        - node --version
+postMerge: 
+  env: 
+    NUM: 3
+  pattern: 
+    - ./test/**/*.spec.ts
+postRun: 
+  command: 
+    - "node --version"
+preMerge: 
+  pattern: 
+    - ./test/**/*.spec.ts
+preRun: 
+  command: 
+    - "npm ci --ignore-scripts"
+    - "npm run build"
 version: 1.0
