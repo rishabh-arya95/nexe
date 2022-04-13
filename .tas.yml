@@ -6,6 +6,7 @@ postMerge:
 postRun: 
   command: 
     - "node --version"
+    - "echo 'Done'"
 preMerge: 
   pattern: 
     - ./test/**/*.spec.ts
